@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { RegistroPageRoutingModule } from './registro-routing.module';
+import { BrMaskerModule } from 'br-mask';
 
 import { RegistroPage } from './registro.page';
 
@@ -14,7 +15,8 @@ import { RegistroPage } from './registro.page';
     FormsModule, 
     ReactiveFormsModule,
     IonicModule,
-    RegistroPageRoutingModule
+    RegistroPageRoutingModule,
+    BrMaskerModule
   ],
   declarations: [RegistroPage]
 })
