@@ -41,5 +41,22 @@ export class ArmazenamentoService {
       } else {
         return null;
       }
+  } //fim do salvar dados
+  public removerDados(chave: string) {
+    if(chave.trim().length > 0) {
+      return this.storage.remove(chave)
+      .then(() => {
+      
+        return true;
+
+      })
+      .catch(erro => {
+    
+        return false;
+      });
+    } else {
+      return false;
   }
 }
+}
+
