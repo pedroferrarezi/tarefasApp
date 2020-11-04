@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CpfValidator } from '../validators/cpf-validator';
-import { ComparacaoValidator } from '../validators/comparacao-validator';
+import { ComparaValidator } from '../validators/comparacao-validator';
 import { UsuariosService } from '../services/usuarios.service';
 import { AlertController } from '@ionic/angular';
 import { Usuario } from '../models/Usuario';
@@ -75,7 +75,7 @@ export class RegistroPage implements OnInit {
       senha: ['', Validators.compose([Validators.required, Validators.minLength(6)])],
       confirma_senha: ['', Validators.compose([Validators.required, Validators.minLength(6)])]
     }, {
-        validator:ComparacaoValidator('senha','confirmaSenha')
+      validator: ComparaValidator('senha', 'confSenha')
     });
 
 
